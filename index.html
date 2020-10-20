@@ -31,14 +31,42 @@
 				<div class="w=90" style="position: relative;">
 					<div class="row level">
 						<div class="col-6" style="padding: 2rem;">
-							<h1 class="headline-4 uppercase">My Library</h1>
+							<h1 class="headline-4 uppercase">Add a book to the Library</h1>
 							<p class="lead">
 								Keep track of the books you have read, are reading or wish to
 								read!!
 							</p>
-							<div class="r">
-								<button id="create-book" class="btn-dark">create book</button>
-							</div>
+							<form action="submit">
+								<div class="form-section">
+									<label class="title" for="book-name">Name</label>
+									<input type="text" id="book-name" />
+									<label class="title" for="author">Author</label>
+									<input type="text" id="author" />
+								</div>
+								<div class="input-control">
+									<div class="form-section section-inline">
+										<label class="title" for="num-pages">Num of pages:</label>
+										<input id="num-pages" />
+									</div>
+								</div>
+								<div class="form-section">
+									<label for="has-read" class="title">Read?</label>
+									<div class="section-body">
+										<label class="radio" for="yes">yes </label>
+										<input type="radio" />
+										<label for="reading" class="radio">reading</label>
+										<input type="radio" id="reading" />
+										<label for="No" class="radio">No </label>
+										<input type="radio" id="No" />
+									</div>
+								</div>
+
+								<div class="row">
+									<button type="submit" id="create-book" class="btn-dark">
+										create book
+									</button>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
