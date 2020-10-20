@@ -31,19 +31,87 @@
 				<div class="w=90" style="position: relative;">
 					<div class="row level">
 						<div class="col-6" style="padding: 2rem;">
-							<h1 class="headline-4 uppercase">My Library</h1>
+							<div class="content">
+							<h1 class="headline-4 uppercase">Add a book to the Library</h1>
 							<p class="lead">
 								Keep track of the books you have read, are reading or wish to
 								read!!
 							</p>
-							<div class="r">
-								<button id="create-book" class="btn-dark">create book</button>
+							<form action="submit">
+								<div class="form-section">
+									<label class="title" for="book-name">Name</label>
+									<input type="text" id="book-name" />
+									<label class="title" for="author">Author</label>
+									<input type="text" id="author" />
+								</div>
+								<div class="input-control">
+									<div class="form-section section-inline">
+										<label class="title" for="num-pages">Num of pages:</label>
+										<input id="num-pages" />
+									</div>
+								</div>
+								<div class="form-section">
+									<label class="font-bold label-small"
+										>Finished reading? <span class="required">*</span></label
+									>
+									<div class="section-body">
+										<label class="radio">
+											<input type="radio" name="member" />
+											Yes
+										</label>
+										<label class="radio">
+											<input type="radio" name="member" />
+											No
+										</label>
+									</div>
+									<span class="required info">This section is required.</span>
+								</div>
+
+								<div class="row">
+									<input
+										type="submit"
+										class="btn-primary btn-animated"
+										value="Submit"
+									/>
+								</div>
+
+							</form>
+						</div>
+					</div>
+						<div class="divider divider--v"></div>
+						<div class="row" style="padding: 2rem;">
+							<div class="content">
+							<h4>Book list:</h4>
+									<table class="table striped">
+											<thead>
+													<tr>
+															<th title="No.">No:</th>
+															<th title="book-title">Book Title</th>
+															<th title="book-author">Author</th>
+															<th title="hasRead">Read?</th>
+													</tr>
+													</thead>
+													<tbody id="dispaly-books">
+															<tr>
+																<td>1</td>
+																<td>Lord of the Rings</td>
+																<td>J R R Tolkein</td>
+																<td><input type="checkbox"/></td>
+															</tr>
+															<tr>
+																<td>2</td>
+																<td>The Hobbit</td>
+																<td>J R R Tolkein</td>
+																<td><input type="checkbox"></td>
+															</tr>
+													</tbody>
+									</table>
 							</div>
+						</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="divider divider--v"></div>
 		</div>
 
 		<script src="src/index.js"></script>
