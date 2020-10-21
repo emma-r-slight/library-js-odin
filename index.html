@@ -32,113 +32,108 @@
 					<div class="row level">
 						<div class="col-6" style="padding: 2rem;">
 							<div class="content">
-							<h1 class="headline-4 uppercase">Add a book to the Library</h1>
-						
-									<img class="img-contain" src="./bookshelt.png" />
-							
-							<p class="lead">
-								Keep track of the books you have read, are reading or wish to
-								read!!
-							</p>
-							<a href="#bookForm">
-								<button class="btn-primary">add book</button>
-							</a>
-							<div id="bookForm" class="modal modal-animated--zoom-in">
-								<a href="#target" class="modal-overlay close-btn" aria-label="close"></a>
-								<div class="modal-content" role="document">
+								<h1 class="headline-4 uppercase">Add a book to the Library</h1>
+
+								<img class="img-contain" src="./bookshelt.png" />
+
+								<p class="lead">
+									Keep track of the books you have read, are reading or wish to
+									read!!
+								</p>
+								<a href="#bookForm">
+									<button class="btn-primary">add book</button>
+								</a>
+								<div id="bookForm" class="modal modal-animated--zoom-in">
+									<a
+										href="#bookform"
+										class="modal-overlay close-btn"
+										aria-label="close"
+									></a>
+									<div class="modal-content" role="document">
 										<div class="modal-header">
-												<a href="#target" class="pull-right" aria-label="Close">
-													<span class="icon">
-													<i class="fa fa-wrapper fa-times"></i></span></a>
-												
-												<div class="modal-body">
-														<div class="modal-title">
-																<h6>Add book to libray:</h6>
-															</div>
-														<form action="submit">
-																<div class="form-section">
-																	<label class="title" for="book-name">Name</label>
-																	<input type="text" id="book-name" />
-																	<label class="title" for="author">Author</label>
-																	<input type="text" id="author" />
-																</div>
-																<div class="input-control">
-																	<div class="form-section section-inline">
-																		<label class="title" for="num-pages">Num of pages:</label>
-																		<input id="num-pages" />
-																	</div>
-																</div>
-																<div class="form-section">
-																	<label class="font-bold label-small"
-																		>Finished reading? <span class="required">*</span></label
-																	>
-																	<div class="section-body">
-																		<label class="radio">
-																			<input type="radio" name="member" />
-																			Yes
-																		</label>
-																		<label class="radio">
-																			<input type="radio" name="member" />
-																			No
-																		</label>
-																	</div>
-																	<span class="required info">This section is required.</span>
-																</div>
-															</form>
+											<a href="#bookform" class="pull-right" aria-label="Close">
+												<span class="icon">
+													<i class="fa fa-wrapper fa-times"></i></span
+											></a>
+
+											<div class="modal-body">
+												<div class="modal-title">
+													<h6>Add book to libray:</h6>
 												</div>
-												<div class="modal-footer">
-														<div class="u-flex">
-															<div class="level-left level-content">
-																	<a href="#target">
-																			<button
-																				class="btn-primary btn-animated"
-																				value="Submit"
-																			>add book
-																	</button>
-															</div>
-															<div class="level-right level-content">
-																<a href="#target">
-																	<button class="btn btn-animated">cancel</button>
-																</a>
-															</div>
+												<form class="form" id="addBook" method="post">
+													<div class="form-section">
+														<label class="title" for="title">Name</label>
+														<input type="text" id="title" name="title" />
+														<label class="title" for="author">Author</label>
+														<input type="text" id="author" name="author" />
+													</div>
+													<div class="input-control">
+														<div class="form-section section-inline">
+															<label class="title" for="numPages"
+																>Num of pages:</label
+															>
+															<input id="numPages" name="numPages" />
 														</div>
-														
+													</div>
+													<div class="form-section">
+														<label class="font-bold label-small"
+															>Finished reading?
+															<span class="required">*</span></label
+														>
+														<label class="checkbox">
+															<input type="checkbox" name="hasRead" />
+														</label>
+														<span class="required info"
+															>This section is required.</span
+														>
+													</div>
+												</form>
+											</div>
+											<div class="modal-footer">
+												<div class="u-flex">
+													<div class="level-left level-content">
+														<a href="#bookForm">
+															<button
+																type="submit"
+																class="btn-primary btn-animated close-btn"
+																value="Submit"
+																form="addBook"
+															>
+																add book
+															</button>
+														</a>
+													</div>
+													<div class="level-right level-content">
+														<a href="#target">
+															<button class="btn btn-animated close-btn">
+																cancel
+															</button>
+														</a>
+													</div>
 												</div>
+											</div>
 										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+
 						<div class="divider divider--v"></div>
 						<div class="row" style="padding: 2rem;">
 							<div class="content">
-							<h4>Book list:</h4>
-									<table class="table striped">
-											<thead>
-													<tr>
-															<th title="No.">No:</th>
-															<th title="book-title">Book Title</th>
-															<th title="book-author">Author</th>
-															<th title="hasRead">Read?</th>
-													</tr>
-													</thead>
-													<tbody id="dispaly-books">
-															<tr>
-																<td>1</td>
-																<td>Lord of the Rings</td>
-																<td>J R R Tolkein</td>
-																<td><input type="checkbox"/></td>
-															</tr>
-															<tr>
-																<td>2</td>
-																<td>The Hobbit</td>
-																<td>J R R Tolkein</td>
-																<td><input type="checkbox"></td>
-															</tr>
-													</tbody>
-									</table>
+								<h4>Book list:</h4>
+								<table class="table striped">
+									<thead>
+										<tr>
+											<th title="No.">No:</th>
+											<th title="book-title">Book Title</th>
+											<th title="book-author">Author</th>
+											<th title="hasRead">Read?</th>
+										</tr>
+									</thead>
+									<tbody id="bookTable"></tbody>
+								</table>
 							</div>
-						</div>
 						</div>
 					</div>
 				</div>
